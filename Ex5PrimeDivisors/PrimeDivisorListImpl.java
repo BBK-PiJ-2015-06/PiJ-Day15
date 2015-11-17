@@ -26,15 +26,6 @@ public class PrimeDivisorListImpl implements PrimeDivisorList {
 		}
 	}
 	
-	/**
-	 * Removes an Integer from the PrimeDivisorList.
-	 *
-	 * @param index the position in the list to remove the Integer.
-	 *
-	 * @throws IndexOutOfBoundsException if index provided is greater or 
-	 *         smaller than the range of indices currently present in 
-	 *         the PrimeDivisorList
-	 */
 	public void remove(int index) {
 		try {
 			if(index < 0 || index >= this.list.size()) {
