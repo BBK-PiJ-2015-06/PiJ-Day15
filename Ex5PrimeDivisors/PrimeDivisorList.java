@@ -1,3 +1,4 @@
+import java.util.*;
 /**
  * A PrimeDivisorList is a list that only takes integers that are prime.
  * Integers can be added and / or removed from the PrimeDivisorList. 
@@ -35,18 +36,25 @@ public interface PrimeDivisorList {
 	void remove(int index);
 	
 	/**
-	 * Removes an Integer from the PrimeDivisorList. Removes all duplicates
-	 * of the Integer provided by the user. This method performs no 
-	 * function if the number is not found in the PrimeDivisorList.
-	 *
-	 * @param integer the Integer to be found and removed from the list
-	 */
-	void remove(Integer integer);
-	
-	/**
 	 * Prints on the screen the product of all Integers within the list. 
      * Prints the result as a product of its prime numbers. If the list
-     * is empty or null, a [0] is printed to the screen.	 
+     * is empty or null, a [] is printed to the screen.	 
+	 *
+	 * @return a string which contains the result as a product of its 
+	 *         prime numbers
 	 */
-	void toString();
+	String toString();
+	
+	/**
+	 * Returns true if the Integer provided is a prime number, otherwise
+     * this method returns false.
+     *
+     * @param integer the Integer to be tested as to whether it is prime
+     *        or not	 
+	 *
+	 * @return returns true if the Integer is prime, false otherwise
+	 */
+	boolean isPrime(Integer integer);
+	
+	List<Integer> getList();
 }
